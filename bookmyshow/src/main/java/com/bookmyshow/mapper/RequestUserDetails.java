@@ -31,7 +31,7 @@ public class RequestUserDetails {
 
 	public TheaterOwner createTheaterOwner(UserDetailsDto userDetailsdto) {
 		TheaterOwner theaterOwner = new TheaterOwner();
-		theaterOwner.setFirstName(userDetailsdto.firstName());
+		       theaterOwner.setFirstName(userDetailsdto.firstName());
 		theaterOwner.setLastName(userDetailsdto.lastName());
 		theaterOwner.setEmail(userDetailsdto.email());
 		theaterOwner.setPhoneNumber(userDetailsdto.phoneNumber());
