@@ -27,12 +27,12 @@ public class UserService implements IUserService {
 	public UserDetialsResponseDto userDetials(UserDetailsDto userDetailsdto) {
 		if (userDetailsdto.userRole() == UserRole.USER) {
 			User user = requestUserDetails.createUser(userDetailsdto);
-			userDetailsRepository.save(user);
+				userDetailsRepository.save(user);
 			return requestUserDetails.userDetailsResponse(user);
 		} else if (userDetailsdto.userRole() == UserRole.THEATER_OWNER) {
 
 			TheaterOwner theaterOwner = requestUserDetails.createTheaterOwner(userDetailsdto);
-			userDetailsRepository.save(theaterOwner);
+				userDetailsRepository.save(theaterOwner);
 			return requestUserDetails.userDetailsResponse(theaterOwner);
 		}
 		return null;
