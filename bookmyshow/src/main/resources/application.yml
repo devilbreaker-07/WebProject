@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: BookmyshowApplication
+
+  datasource:
+    url: jdbc:h2:mem:testdb?createIfNotExist=true
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /console-sql
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+     "hibernate.format_sql": true
+     "hibernate.highlight_sql": true
+api:
+ prefix: bookingshow		 
